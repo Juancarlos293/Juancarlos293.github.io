@@ -1,0 +1,375 @@
+/* Para la versión móvil (responsive), el logo estará centrado */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Para pantallas grandes, el logo se pega a la orilla */
+@media (min-width: 992px) {
+  .logo-container {
+    justify-content: flex-start; /* Pegado a la orilla izquierda */
+    padding-left: 15px; /* Agregar un poco de espacio desde la orilla */
+  }
+}
+
+/* Asegúrate de que el logo no se estire en tamaños pequeños */
+.navbar .logo-container img {
+  max-width: 200px;
+  height: auto;
+}
+
+/* Configuración general de la navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Alineación de los elementos */
+  align-items: center; /* Centrado vertical */
+  background-color: white; /* Color de fondo */
+  font-size: 20px; /* Ajusta el tamaño según tu preferencia */
+  font-family: 'Roboto', sans-serif; /* Fuente Geologica */
+  padding: 0px 25px; /* Espaciado horizontal entre los elementos */
+}
+
+/* Estilo de los enlaces de navegación */
+.navbar a {
+  text-decoration: none; /* Elimina el subrayado */
+  color: black !important; /* Asegura que el color de texto inicial sea negro */
+  padding: 10px 15px; /* Ajusta el padding */
+  transition: background-color 0.3s, color 0.3s; /* Efecto de transición suave */
+  border-radius: 8px; /* Bordes redondeados */
+}
+
+.navbar a:hover {
+  background-color: black; /* Fondo negro cuando se pasa el cursor */
+  color: white !important; /* Texto blanco cuando se pasa el cursor */
+}
+
+/* Desactiva los eventos de puntero para las imágenes */
+.navbar .navbar-brand img {
+  pointer-events: none;
+}
+
+/* Separador personalizado */
+hr.navbar-divider {
+  border-top: 30px solid #cacaca19; /* Ajusta el color y grosor de la línea */
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.navbar-toggler {
+  margin-top: -150px; /* Ajusta este valor para moverlo más arriba o abajo */
+}
+body {
+  background-color: #FFFFFF; 
+}
+.cartel-sucursal {
+  background-color: #71BBD9;
+  text-align: center;
+  padding: 10px;
+  font-size: 50px;
+  color: #000000;
+  font-family: 'Anton', sans-serif;
+  border-radius: 0px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+section {
+  text-align: center; 
+}
+h2{
+   text-align: center;
+   font-size: 35px; 
+   font-family: 'Roboto', sans-serif;
+}	
+.card-body {                   
+  display: flex;
+  flex-direction: column;  
+  justify-content: center; 
+  text-align: center;   
+  border-radius: 15px;   
+}
+
+.card {
+  width: 18rem;
+  height: 22rem;
+  background-color: #23A5D9; 
+  margin-top: 20px;
+  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.3);
+  margin-bottom: 40px; 
+}
+
+.card-title {
+  color: #000000; 
+  font-family: 'Roboto', sans-serif;
+  background-color: #CACACA; 
+  padding: 5px 15px; /* Ajusta el espaciado interno */
+  text-align: center;
+  display: inline-block; 
+  width: 100%; /* Ajusta el ancho al 90% del contenedor */
+  margin: 0 auto; /* Centra el elemento */
+  font-size: 30px;
+  box-sizing: border-box; /* Incluye el padding en el ancho */
+  position: relative; /* Permite ajustar la posición */
+  top: -15px; /* Mueve el título hacia arriba para que sobresalga */
+  border-radius: 15px; /* Suaviza las esquinas para armonizar el diseño */
+}
+
+
+
+.card-text {
+  font-size: 30px; 
+  color: #FFFFFF;
+  text-align: center;
+  font-family: 'Roboto', sans-serif; 
+}
+h6{
+  font-size: 25px; 
+  color: #FFFFFF;
+  font-family: 'Roboto', sans-serif; 
+}
+.btn-primary { 
+  background-color: #71BBD9; 
+  color: #FFFFFF; 
+  font-family: 'Anton', sans-serif;
+  cursor: pointer; 
+  border-radius: 15px; 
+}
+.card-container1 {
+  display: flex; 
+  gap: 15px;
+  justify-content: space-around;
+}
+
+.card {
+  width: 18rem;
+}
+
+.card-container2 {
+  display: flex; 
+  gap: 15px; 
+  justify-content: space-around;
+}
+.card {
+  width: 18rem;
+}
+.last-card2 .card-body h6 {
+  font-size: 17px;
+}
+
+.last-card .card-body h6 {
+  font-size: 15px; 
+}
+/* Mantén la estructura original, ajustando solo la disposición en pantallas pequeñas */
+.card-container1, .card-container2 {
+  display: flex;
+  gap: 15px;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Permite que las tarjetas se distribuyan en varias filas */
+}
+
+@media (max-width: 768px) {
+  .card-container1, .card-container2 {
+    justify-content: center; /* Centra las tarjetas en pantallas más pequeñas */
+  }
+
+  .card {
+    width: 90%; /* Las tarjetas ocupan el 90% del ancho del contenedor */
+    margin-bottom: 20px; /* Asegura separación entre tarjetas */
+  }
+}
+
+@media (max-width: 480px) {
+  .card-container1, .card-container2 {
+    flex-direction: column; /* Coloca las tarjetas en una columna */
+    align-items: center; /* Centra las tarjetas verticalmente */
+  }
+
+  .card {
+    width: 100%; /* Ocupa el ancho completo del contenedor */
+  }
+}
+
+.footer {
+  background-color: #000; /* Fondo negro */
+  color: #fff; /* Texto blanco */
+  width: 100%;
+  height: 429px;
+  font-family: 'Roboto', sans-serif; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  width: 85%;
+  height: 300px;
+  padding: 25px 0px 25px 0px;
+  display: flex;
+  align-content: center;
+  flex-direction: row;
+}
+
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Responsivo */
+  gap: 15px;
+  text-align: left;
+}
+
+.footer-logo-container {
+  flex: 12;
+  padding-left: 30px; /* Mueve el logo ligeramente */
+}
+
+.footer-logo {
+  width: 30%;
+  height: 150px;
+}
+
+.footer-text {
+  width: 70%;
+  height: 90px;
+  padding-top: 60px;
+  flex: 2;
+  text-align: center;
+}
+
+.footer-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-text p {
+  font-size: 18px;
+  margin: 0px 0;
+  line-height: 1.6;
+  padding-bottom: 30px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* Separación uniforme entre los íconos */
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+.social-icons .social-icon {
+  width: 40px;
+  height: 40px;
+  transition: opacity 0.3s;
+}
+
+.social-icons img {
+  width: 40px;
+  height: 40px;
+  padding: 0; /* Asegúrate de que no haya padding adicional */
+  filter: grayscale(100%);
+}
+.social-icons img:hover{
+  filter: sepia(100%);
+}
+.social-icons-img-facebook,
+.social-icons-img-Twi,
+.social-icons-img-Ins {
+  padding-right: 0; /* Elimina cualquier padding adicional */
+}
+
+
+.social-icons .social-icon:hover {
+  opacity: 0.7;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 30px solid #0d75d3;
+}
+
+.footer-bottom p {
+  margin: 5px 0;
+}
+.footer-borde {
+  width: 100%; /* Hace que la línea ocupe todo el ancho */
+  border-top: 3px solid #fff; /* Color blanco */
+  margin: 0 auto; /* Centrar si está dentro de un contenedor más pequeño */
+}
+
+.footer-copy {
+  width: 100%;
+  height: 129px;
+  display: flex;
+  align-content: center;
+  padding-left: 643px;
+  padding-top: 58px;
+}
+
+/* Responsividad */
+@media (max-width: 1024px) {
+  .footer{
+    height: 380px;
+  }
+  .container{
+    width: 100%;
+    height: 89%;
+  }
+  .footer-logo{
+    width: 40%;
+    padding-top: 20px;
+  }
+  .footer-copy{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10%;
+    padding: 0;
+  }
+  /*ubicacion*/
+  .ubicacion-layout{
+    flex-direction: column;
+  }
+  iframe {
+    display: block; /* Asegúrate de que sea un bloque adaptable */
+    max-width: 100%; /* Limita el ancho máximo al contenedor */
+    height: auto; /* Ajusta la altura proporcionalmente */
+    aspect-ratio: 16 / 9; /* Mantén la relación de aspecto */
+    border: 0; /* Opcional: elimina el borde */
+}
+}
+@media (max-width: 480px){
+  /*footer*/
+  .footer{
+    width: 100%;
+    height: 600px;
+  }
+  .container{
+    width: 100%;
+    height: 89%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-logo{
+    width: 100%;
+    height: 35%;
+    display: flex;
+    justify-content: center;
+  }
+  .footer-text{
+    padding-top: 30px;
+    height: 65%;
+  }
+  .footer-copy{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10%;
+    padding: 0;
+  }
+}

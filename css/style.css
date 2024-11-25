@@ -1,0 +1,501 @@
+/* Para la versión móvil (responsive), el logo estará centrado */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Para pantallas grandes, el logo se pega a la orilla */
+@media (min-width: 992px) {
+  .logo-container {
+    justify-content: flex-start; /* Pegado a la orilla izquierda */
+    padding-left: 15px; /* Agregar un poco de espacio desde la orilla */
+  }
+}
+
+/* Asegúrate de que el logo no se estire en tamaños pequeños */
+.navbar .logo-container img {
+  max-width: 200px;
+  height: auto;
+}
+
+/* Configuración general de la navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Alineación de los elementos */
+  align-items: center; /* Centrado vertical */
+  background-color: white; /* Color de fondo */
+  font-size: 20px; /* Ajusta el tamaño según tu preferencia */
+  font-family: 'Roboto', sans-serif; /* Fuente Geologica */
+  padding: 0px 25px; /* Espaciado horizontal entre los elementos */
+}
+
+/* Estilo de los enlaces de navegación */
+.navbar a {
+  text-decoration: none; /* Elimina el subrayado */
+  color: black !important; /* Asegura que el color de texto inicial sea negro */
+  padding: 10px 15px; /* Ajusta el padding */
+  transition: background-color 0.3s, color 0.3s; /* Efecto de transición suave */
+  border-radius: 8px; /* Bordes redondeados */
+}
+
+.navbar a:hover {
+  background-color: black; /* Fondo negro cuando se pasa el cursor */
+  color: white !important; /* Texto blanco cuando se pasa el cursor */
+}
+
+/* Desactiva los eventos de puntero para las imágenes */
+.navbar .navbar-brand img {
+  pointer-events: none;
+}
+
+/* Separador personalizado */
+hr.navbar-divider {
+  border-top: 30px solid #cacaca19; /* Ajusta el color y grosor de la línea */
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.navbar-toggler {
+  margin-top: -150px; /* Ajusta este valor para moverlo más arriba o abajo */
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.footer {
+  background-color: #000; /* Fondo negro */
+  color: #fff; /* Texto blanco */
+  width: 100%;
+  height: 429px;
+  font-family: 'Roboto', sans-serif; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  width: 85%;
+  height: 300px;
+  padding: 25px 0px 25px 0px;
+  display: flex;
+  align-content: center;
+  flex-direction: row;
+}
+
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Responsivo */
+  gap: 15px;
+  text-align: left;
+}
+
+.footer-logo-container {
+  flex: 12;
+  padding-left: 30px; /* Mueve el logo ligeramente */
+}
+
+.footer-logo {
+  width: 30%;
+  height: 150px;
+}
+
+.footer-text {
+  width: 70%;
+  height: 90px;
+  padding-top: 60px;
+  flex: 2;
+  text-align: center;
+}
+
+.footer-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-text p {
+  font-size: 18px;
+  margin: 0px 0;
+  line-height: 1.6;
+  padding-bottom: 30px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* Separación uniforme entre los íconos */
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+.social-icons .social-icon {
+  width: 40px;
+  height: 40px;
+  transition: opacity 0.3s;
+}
+
+.social-icons img {
+  width: 40px;
+  height: 40px;
+  padding: 0; /* Asegúrate de que no haya padding adicional */
+  filter: grayscale(100%);
+}
+.social-icons img:hover{
+  filter: sepia(100%);
+}
+.social-icons-img-facebook,
+.social-icons-img-Twi,
+.social-icons-img-Ins {
+  padding-right: 0; /* Elimina cualquier padding adicional */
+}
+
+
+.social-icons .social-icon:hover {
+  opacity: 0.7;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 30px solid #0d75d3;
+}
+
+.footer-bottom p {
+  margin: 5px 0;
+}
+.footer-borde {
+  width: 100%; /* Hace que la línea ocupe todo el ancho */
+  border-top: 3px solid #fff; /* Color blanco */
+  margin: 0 auto; /* Centrar si está dentro de un contenedor más pequeño */
+}
+
+.footer-copy {
+  width: 100%;
+  height: 129px;
+  display: flex;
+  align-content: center;
+  padding-left: 643px;
+  padding-top: 58px;
+}
+
+/* Responsividad */
+@media (max-width: 1024px) {
+  .footer{
+    height: 380px;
+  }
+  .container{
+    width: 100%;
+    height: 89%;
+  }
+  .footer-logo{
+    width: 40%;
+    padding-top: 20px;
+  }
+  .footer-copy{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10%;
+    padding: 0;
+  }
+  /*ubicacion*/
+  .ubicacion-layout{
+    flex-direction: column;
+  }
+  iframe {
+    display: block; /* Asegúrate de que sea un bloque adaptable */
+    max-width: 100%; /* Limita el ancho máximo al contenedor */
+    height: auto; /* Ajusta la altura proporcionalmente */
+    aspect-ratio: 16 / 9; /* Mantén la relación de aspecto */
+    border: 0; /* Opcional: elimina el borde */
+}
+}
+@media (max-width: 480px){
+  /*footer*/
+  .footer{
+    width: 100%;
+    height: 600px;
+  }
+  .container{
+    width: 100%;
+    height: 89%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-logo{
+    width: 100%;
+    height: 35%;
+    display: flex;
+    justify-content: center;
+  }
+  .footer-text{
+    padding-top: 30px;
+    height: 65%;
+  }
+  .footer-copy{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10%;
+    padding: 0;
+  }
+}
+
+/* Fuente de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap');
+
+/* Contenedor principal */
+.sucursal-container {
+    text-align: center;
+    background-color: #71BBD9;
+    padding: 10px 0;
+    font-family: 'Anton', sans-serif; /* Aplica Goldman a toda la sección */
+}
+
+/* Estilo del cartel "Nuestra Sucursal" */
+.cartel-sucursal {
+  background-color: #71BBD9;
+  text-align: center;
+  padding: 10px;
+  font-size: 50px;
+  color: #000000;
+  font-family: 'Anton', sans-serif;
+  border-radius: 0px;
+  margin-bottom: 55px;
+  margin-top: 55px;
+}
+
+/* Imagen de la sucursal */
+.imagen-sucursal {
+  width: 1512px;
+  height: 730px;
+  width: 100vw; /* Ocupa el 100% del ancho de la ventana del navegador */
+  max-width: 100%; /* Evita que exceda el ancho de la pantalla */
+  height: auto; /* Mantiene la proporción original */
+  display: block;
+  margin: 0; /* Elimina cualquier margen */
+}
+/* Estilo adicional para el contenedor */
+body, html {
+  margin: 0;
+  padding: 0;
+   /* Evita el desbordamiento horizontal */
+}
+
+/* Contenedor de la ubicación *
+.ubicacion-container {
+  background-color: #EDEDED;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 55px;
+  margin-bottom: 55px;
+  text-align: center;
+}
+
+/* Estructura horizontal del título y mapa */
+.ubicacion-container {
+  background-color: #EDEDED;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+.ubicacion-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  max-width: 1200px; /* Ajusta el tamaño máximo del contenedor */
+  gap: 20px;
+  
+
+}
+
+/* Título de la ubicación */
+.ubicacion-title {
+  font-size: 50px;
+  color: #000000;
+  font-family: 'Anton', sans-serif;
+  margin: 0;
+  flex: 0 0 auto; /* Evita que el título se redimensione */
+  text-align: left;
+}
+
+/* Mapa interactivo más horizontal */
+
+.ubicacion-map iframe {
+  width: 672px;
+  height: 300px;
+  border-radius: 15px;
+}
+
+/* Contenedor de la dirección con el logo */
+.ubicacion-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Imagen del logo en la dirección */
+.ubicacion-icon {
+  width: 50px;
+  height: 50px;
+}
+
+/* Texto de la dirección */
+.ubicacion-text {
+  font-size: 27px;
+  color: #000000;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 0px;
+}
+
+
+/* Estilo del cartel "Nuestras Salas de Entrenamiento" */
+.cartel-salas {
+  background-color: #71BBD9; /* mismo color que el cartel de "Nuestra Sucursal" */
+  text-align: center;
+  padding: 10px;
+  font-size: 50px;
+  color: #000000;
+  font-family: 'Anton', sans-serif;
+  border-radius: 0px;
+  margin-bottom: 55px;
+}
+
+/* Estilo para las imágenes de las salas y su texto */
+.sala {
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.sala img {
+  width: 100%;
+  border-radius: 0px;
+  margin-bottom: 55px;
+}
+
+.sala p {
+  font-size: 18px;
+  color: #000000;
+  font-family: 'Anton', sans-serif;
+  margin-top: 5px;
+}
+
+/* Contenedor principal del formulario */
+.formulario-container {
+  max-width: 1000px; /* Aumenta el tamaño del formulario */
+  margin: 0 auto;
+  padding: 40px; /* Más espacio interno */
+  background-color: #f2f2f2;
+  border-radius: 12px; /* Bordes ligeramente redondeados */
+  text-align: center;
+  font-family: 'Anton', sans-serif;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* AgSrega una sombra sutil */
+}
+
+/* Título del formulario */
+.formulario-titulo {
+  font-size: 36px; /* Incrementa el tamaño del título */
+  color: #000000;
+  margin-bottom: 40px; /* Más espacio debajo del título */
+}
+
+/* Contenedor de los campos */
+.formulario-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 25px; /* Más espacio entre los campos */
+}
+
+/* Grupos de campos para entradas lado a lado */
+.formulario-grupo {
+  display: flex;
+  gap: 20px; /* Espacio entre los campos del mismo grupo */
+}
+
+/* Campos de texto */
+.formulario-grupo input,
+.formulario-grupo-mensaje textarea {
+  width: 100%; /* Asegura que los campos llenen su contenedor */
+  padding: 18px; /* Más espacio interno */
+  border: 2px solid #ccc; /* Bordes más visibles */
+  border-radius: 6px;
+  font-size: 20px; /* Incrementa el tamaño del texto */
+  font-family: 'Roboto', sans-serif; /* Fuente clara para los campos */
+  resize: none;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1); /* Efecto de profundidad interno */
+}
+
+/* Campo de texto para el mensaje */
+textarea {
+  height: 150px; /* Incrementa la altura del área de texto */
+}
+
+/* Botón de envío */
+.formulario-boton {
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  padding: 20px 40px; /* Botón más grande */
+  font-size: 20px; /* Texto del botón más grande */
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-family: 'Anton', sans-serif;
+}
+
+.formulario-boton:hover {
+  background-color: #0d75d3;
+  transform: scale(1.05); /* Efecto de agrandamiento al pasar el cursor */
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+  .formulario-grupo {
+    flex-direction: column; /* Apila los campos en pantallas pequeñas */
+  }
+
+  .formulario-container {
+    max-width: 90%; /* Ajusta el tamaño del formulario */
+    padding: 20px;
+  }
+
+  .formulario-titulo {
+    font-size: 28px; /* Ajusta el tamaño del título */
+  }
+
+  .formulario-boton {
+    width: 100%; /* Botón ocupa todo el ancho en pantallas pequeñas */
+  }
+}
+
+
+
