@@ -105,7 +105,13 @@ p {
 .info-contenedor {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* Alineación inicial */
+  justify-content: flex-start; /* Alineación de la imagen a la izquierda */
+  background-color: rgb(202, 199, 199); /* Color gris del contenedor */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  flex: 1;
+  height: 200px;
 }
 
 /* Estilo de los cuadros de información */
@@ -113,7 +119,7 @@ p {
   background-color: rgb(202, 199, 199);
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
   text-align: left;
   flex: 1;
   height: 200px;
@@ -121,10 +127,11 @@ p {
 
 /* Imagen dentro de cada cuadro */
 .imagen-cuadro {
-  width: 200px;
-  height: 200px;
+  width: 150px; /* Controla el tamaño de la imagen */
+  height: 150px;
   border-radius: 8px;
-  margin-right: 20px;
+  margin-right: 20px; /* Espacio entre la imagen y el texto */
+  object-fit: cover; /* Mantiene las proporciones */;
 }
 
 /* Estilo para los títulos de cada sección */
@@ -319,6 +326,17 @@ p {
     height: 10%;
     padding: 0;
   }
+  /*ubicacion*/
+  .ubicacion-layout{
+    flex-direction: column;
+  }
+  iframe {
+    display: block; /* Asegúrate de que sea un bloque adaptable */
+    max-width: 100%; /* Limita el ancho máximo al contenedor */
+    height: auto; /* Ajusta la altura proporcionalmente */
+    aspect-ratio: 16 / 9; /* Mantén la relación de aspecto */
+    border: 0; /* Opcional: elimina el borde */
+}
 }
 @media (max-width: 480px){
   /*footer*/
