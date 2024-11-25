@@ -1,11 +1,9 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Selecciona el botón de enviar y el modal
-    const enviarBtn = document.getElementById("enviarBtn");
-    const modalConfirmacion = new bootstrap.Modal(document.getElementById("modalConfirmacion"));
+document.addEventListener("DOMContentLoaded", function () {
+    const formulario = document.querySelector(".formulario-contacto");
+    const modal = new bootstrap.Modal(document.getElementById("modalConfirmacion"));
 
-    // Escucha el clic en el botón
-    enviarBtn.addEventListener("click", function() {
-        // Abre el modal
-        modalConfirmacion.show();
+    formulario.addEventListener("submit", function (event) {
+        event.preventDefault(); // Evita que el formulario se envíe y recargue la página
+        modal.show(); // Muestra el modal
     });
 });
